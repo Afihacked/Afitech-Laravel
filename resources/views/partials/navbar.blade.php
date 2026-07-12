@@ -88,7 +88,7 @@
 
       <div class="hidden md:block">
 
-        <a href="https://github.com/Afihacked"
+        <a href="https://github.com/Afihacked/Afitech-Laravel"
           target="_blank"
           rel="noreferrer"
           data-cursor-hover
@@ -154,7 +154,7 @@
 
       <div class="mt-4 border-t border-white/60 pt-4 dark:border-white/10">
 
-        <a href="https://github.com/Afihacked"
+        <a href="https://github.com/Afihacked/Afitech-Laravel"
           target="_blank"
           rel="noreferrer"
           data-cursor-hover

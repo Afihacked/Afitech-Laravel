@@ -140,7 +140,7 @@ $services = [
 
       <div class="flex flex-wrap items-center gap-4">
 
-        <a href="https://github.com/Afihacked" target="_blank" rel="noreferrer" data-cursor-hover
+        <a href="https://github.com/Afihacked/Afitech-Laravel" target="_blank" rel="noreferrer" data-cursor-hover
           class="transition-default text-slate-300 hover:text-white">
 
           GitHub
