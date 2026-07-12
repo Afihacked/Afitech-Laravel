@@ -1,0 +1,196 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================================
+   Transition
+========================================================== */
+
+@utility transition-default {
+    transition:
+        background-color var(--motion-normal),
+        color var(--motion-normal),
+        border-color var(--motion-normal),
+        transform var(--motion-normal),
+        opacity var(--motion-normal);
+}
+
+/* ==========================================================
+   Entrance Animation
+========================================================== */
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@utility fade-up {
+    animation: fade-up 0.8s ease forwards;
+}
+
+/* ==========================================================
+   Dynamic Hero Background
+========================================================== */
+
+.hero-aurora {
+    background:
+        linear-gradient(115deg, transparent 8%, rgb(37 99 235 / 0.14) 28%, transparent 48%),
+        linear-gradient(65deg, transparent 18%, rgb(6 182 212 / 0.16) 44%, transparent 68%),
+        linear-gradient(145deg, transparent 28%, rgb(14 165 233 / 0.12) 54%, transparent 76%);
+    filter: blur(22px);
+    transform: skewY(-8deg);
+    animation: hero-aurora-flow 18s ease-in-out infinite alternate;
+}
+
+.dark .hero-aurora {
+    background:
+        linear-gradient(115deg, transparent 8%, rgb(37 99 235 / 0.3) 28%, transparent 48%),
+        linear-gradient(65deg, transparent 18%, rgb(6 182 212 / 0.24) 44%, transparent 68%),
+        linear-gradient(145deg, transparent 28%, rgb(8 47 73 / 0.55) 54%, transparent 76%);
+}
+
+.hero-ribbon {
+    clip-path: polygon(0 42%, 24% 28%, 54% 36%, 100% 12%, 100% 44%, 54% 68%, 25% 60%, 0 78%);
+    filter: blur(18px);
+    animation: hero-ribbon-drift 16s ease-in-out infinite alternate;
+}
+
+.hero-ribbon-secondary {
+    clip-path: polygon(0 20%, 36% 44%, 68% 34%, 100% 56%, 100% 82%, 68% 60%, 35% 72%, 0 48%);
+    animation-delay: -7s;
+    animation-duration: 20s;
+}
+
+.hero-grid-motion {
+    background-image:
+        linear-gradient(to right, rgb(148 163 184 / 0.24) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(148 163 184 / 0.24) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: linear-gradient(to bottom, transparent, black 18%, black 72%, transparent);
+    animation: hero-grid-drift 22s linear infinite;
+}
+
+.dark .hero-grid-motion {
+    background-image:
+        linear-gradient(to right, rgb(125 211 252 / 0.12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(125 211 252 / 0.1) 1px, transparent 1px);
+}
+
+.hero-scan {
+    background: linear-gradient(90deg, transparent, rgb(6 182 212 / 0.14), transparent);
+    animation: hero-scan 10s ease-in-out infinite;
+}
+
+.dark .hero-scan {
+    background: linear-gradient(90deg, transparent, rgb(125 211 252 / 0.18), transparent);
+}
+
+@keyframes hero-aurora-flow {
+    from {
+        background-position:
+            0% 45%,
+            22% 18%,
+            60% 52%;
+        transform: translate3d(-2%, -1%, 0) skewY(-8deg) scale(1);
+    }
+
+    to {
+        background-position:
+            42% 35%,
+            74% 28%,
+            18% 64%;
+        transform: translate3d(2%, 2%, 0) skewY(-6deg) scale(1.04);
+    }
+}
+
+@keyframes hero-ribbon-drift {
+    from {
+        transform: translate3d(-4%, -2%, 0) rotate(-2deg);
+    }
+
+    to {
+        transform: translate3d(5%, 3%, 0) rotate(2deg);
+    }
+}
+
+@keyframes hero-grid-drift {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 64px 64px;
+    }
+}
+
+@keyframes hero-scan {
+    0%,
+    100% {
+        transform: translateX(-70%) skewX(-14deg);
+        opacity: 0;
+    }
+
+    18%,
+    60% {
+        opacity: 1;
+    }
+
+    78% {
+        transform: translateX(70%) skewX(-14deg);
+        opacity: 0;
+    }
+}
+
+/* ==========================================================
+   Mouse Motion
+========================================================== */
+
+.mouse-cursor-ring,
+.mouse-cursor-dot,
+.mouse-click-ripple {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.mouse-cursor-ring {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgb(15 23 42 / 0.24);
+    border-radius: 9999px;
+    background: rgb(255 255 255 / 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.mouse-cursor-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: rgb(15 23 42 / 0.42);
+}
+
+.mouse-click-ripple {
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgb(6 182 212 / 0.55);
+    border-radius: 9999px;
+    box-shadow: 0 0 28px rgb(6 182 212 / 0.24);
+}
+
+.has-mouse-motion .mouse-cursor-ring,
+.has-mouse-motion .mouse-cursor-dot {
+    opacity: 1;
+}

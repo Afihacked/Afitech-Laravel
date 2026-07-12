@@ -1,0 +1,52 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-primary: #f8fafc;
+    --text-primary: #0f172a;
+    color-scheme: light;
+}
+
+.dark {
+    --bg-primary: #020617;
+    --text-primary: #e2e8f0;
+    color-scheme: dark;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+
+    background: var(--bg-primary);
+
+    color: var(--text-primary);
+
+    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    transition:
+        background-color var(--motion-normal),
+        color var(--motion-normal);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+svg {
+    display: block;
+
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}

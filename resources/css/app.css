@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================================================
+   FONT
+========================================================== */
+
+@import "@fontsource/inter";
+
+/* ==========================================================
+   CORE
+========================================================== */
+
+@import "./tokens.css";
+@import "./base.css";
+@import "./utilities.css";
+@import "./animations.css";
+
+/* ==========================================================
+   AFITECH THEME
+========================================================== */
+
+@theme {
+
+    /* Container */
+    --container-afitech: 1280px;
+
+    /* Brand */
+    --color-primary: #2563eb;
+    --color-accent: #06b6d4;
+
+    /* Radius */
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+
+    /* Motion */
+    --motion-fast: 150ms;
+    --motion-normal: 250ms;
+    --motion-slow: 400ms;
+}
