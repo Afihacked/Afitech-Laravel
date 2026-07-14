@@ -43,9 +43,24 @@ html {
 
 .hero-aurora {
     background:
-        linear-gradient(115deg, transparent 8%, rgb(37 99 235 / 0.14) 28%, transparent 48%),
-        linear-gradient(65deg, transparent 18%, rgb(6 182 212 / 0.16) 44%, transparent 68%),
-        linear-gradient(145deg, transparent 28%, rgb(14 165 233 / 0.12) 54%, transparent 76%);
+        linear-gradient(
+            115deg,
+            transparent 8%,
+            rgb(37 99 235 / 0.14) 28%,
+            transparent 48%
+        ),
+        linear-gradient(
+            65deg,
+            transparent 18%,
+            rgb(6 182 212 / 0.16) 44%,
+            transparent 68%
+        ),
+        linear-gradient(
+            145deg,
+            transparent 28%,
+            rgb(14 165 233 / 0.12) 54%,
+            transparent 76%
+        );
     filter: blur(22px);
     transform: skewY(-8deg);
     animation: hero-aurora-flow 18s ease-in-out infinite alternate;
@@ -53,19 +68,52 @@ html {
 
 .dark .hero-aurora {
     background:
-        linear-gradient(115deg, transparent 8%, rgb(37 99 235 / 0.3) 28%, transparent 48%),
-        linear-gradient(65deg, transparent 18%, rgb(6 182 212 / 0.24) 44%, transparent 68%),
-        linear-gradient(145deg, transparent 28%, rgb(8 47 73 / 0.55) 54%, transparent 76%);
+        linear-gradient(
+            115deg,
+            transparent 8%,
+            rgb(37 99 235 / 0.3) 28%,
+            transparent 48%
+        ),
+        linear-gradient(
+            65deg,
+            transparent 18%,
+            rgb(6 182 212 / 0.24) 44%,
+            transparent 68%
+        ),
+        linear-gradient(
+            145deg,
+            transparent 28%,
+            rgb(8 47 73 / 0.55) 54%,
+            transparent 76%
+        );
 }
 
 .hero-ribbon {
-    clip-path: polygon(0 42%, 24% 28%, 54% 36%, 100% 12%, 100% 44%, 54% 68%, 25% 60%, 0 78%);
+    clip-path: polygon(
+        0 42%,
+        24% 28%,
+        54% 36%,
+        100% 12%,
+        100% 44%,
+        54% 68%,
+        25% 60%,
+        0 78%
+    );
     filter: blur(18px);
     animation: hero-ribbon-drift 16s ease-in-out infinite alternate;
 }
 
 .hero-ribbon-secondary {
-    clip-path: polygon(0 20%, 36% 44%, 68% 34%, 100% 56%, 100% 82%, 68% 60%, 35% 72%, 0 48%);
+    clip-path: polygon(
+        0 20%,
+        36% 44%,
+        68% 34%,
+        100% 56%,
+        100% 82%,
+        68% 60%,
+        35% 72%,
+        0 48%
+    );
     animation-delay: -7s;
     animation-duration: 20s;
 }
@@ -75,7 +123,13 @@ html {
         linear-gradient(to right, rgb(148 163 184 / 0.24) 1px, transparent 1px),
         linear-gradient(to bottom, rgb(148 163 184 / 0.24) 1px, transparent 1px);
     background-size: 64px 64px;
-    mask-image: linear-gradient(to bottom, transparent, black 18%, black 72%, transparent);
+    mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        black 18%,
+        black 72%,
+        transparent
+    );
     animation: hero-grid-drift 22s linear infinite;
 }
 
@@ -86,12 +140,22 @@ html {
 }
 
 .hero-scan {
-    background: linear-gradient(90deg, transparent, rgb(6 182 212 / 0.14), transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgb(6 182 212 / 0.14),
+        transparent
+    );
     animation: hero-scan 10s ease-in-out infinite;
 }
 
 .dark .hero-scan {
-    background: linear-gradient(90deg, transparent, rgb(125 211 252 / 0.18), transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgb(125 211 252 / 0.18),
+        transparent
+    );
 }
 
 @keyframes hero-aurora-flow {
@@ -148,6 +212,22 @@ html {
         transform: translateX(70%) skewX(-14deg);
         opacity: 0;
     }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-up {
+    animation: slide-up 0.24s ease-out both;
 }
 
 /* ==========================================================

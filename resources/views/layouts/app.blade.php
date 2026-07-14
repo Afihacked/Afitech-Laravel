@@ -41,6 +41,7 @@
 
   @include('partials.footer')
 
+  @include('partials.whatsapp-widget')
   @include('partials.back-to-top')
 
 </body>
