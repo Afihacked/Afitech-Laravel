@@ -11,6 +11,7 @@ $services = [
 ['label' => 'Artificial Intelligence', 'href' => '/services/artificial-intelligence'],
 ['label' => 'Web Development', 'href' => '/services/web-development'],
 ['label' => 'Android Apps', 'href' => '/services/android-apps'],
+['label' => 'Handphone & Computer', 'href' => '/services/handphone-computer'],
 ['label' => 'Backend System', 'href' => '/services/backend-system'],
 ['label' => 'Cloud Services', 'href' => '/services/cloud-services'],
 ['label' => 'REST API', 'href' => '/services/rest-api'],

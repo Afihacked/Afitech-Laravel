@@ -47,6 +47,17 @@ $services = [
         ],
         'callToAction' => 'Start a mobile app project',
     ],
+    'handphone-computer' => [
+        'title' => 'Handphone & Computer',
+        'subtitle' => 'Perbaikan, instalasi, dan dukungan teknis untuk handphone dan komputer Anda.',
+        'overview' => 'Afitech membantu menjaga perangkat Anda tetap optimal melalui diagnosa masalah, perbaikan, instalasi sistem, dan dukungan teknis yang cepat.',
+        'features' => [
+            'Diagnosa kerusakan hardware dan software',
+            'Instalasi sistem operasi dan aplikasi',
+            'Optimasi performa dan perawatan rutin',
+        ],
+        'callToAction' => 'Get support for your device',
+    ],
     'rest-api' => [
         'title' => 'REST API',
         'subtitle' => 'Well-structured APIs for secure integrations and seamless data exchange.',

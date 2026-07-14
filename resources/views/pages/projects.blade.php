@@ -59,6 +59,7 @@
       ['title' => 'Artificial Intelligence', 'description' => 'Solusi AI untuk otomatisasi, predictive insights, dan personalisasi digital.', 'icon' => '💡'],
       ['title' => 'Web Development', 'description' => 'Website responsif dengan desain modern yang memperkuat brand digital Anda.', 'icon' => '🌐'],
       ['title' => 'Android Apps', 'description' => 'Aplikasi mobile yang fokus pada pengalaman pengguna dan performa stabil.', 'icon' => '📱'],
+      ['title' => 'Handphone & Computer', 'description' => 'Layanan perbaikan, instalasi, dan dukungan teknis untuk perangkat Anda.', 'icon' => '🛠️'],
       ['title' => 'REST API', 'description' => 'API terstruktur untuk integrasi sistem dan pertukaran data yang aman.', 'icon' => '🔗'],
       ['title' => 'Backend System', 'description' => 'Sistem backend yang dirancang untuk beban tinggi dan manajemen data cerdas.', 'icon' => '⚙️'],
       ['title' => 'Cloud Services', 'description' => 'Penyebaran cloud yang efisien untuk infrastruktur yang dapat diandalkan.', 'icon' => '☁️'],

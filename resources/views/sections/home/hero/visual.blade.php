@@ -111,6 +111,18 @@
   ])
 
   @include('sections.home.hero.tech-card', [
+  'title' => 'Handphone & Computer',
+  'icon' => '
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="4" y="3" width="16" height="18" rx="2" />
+    <path d="M9 17h6" />
+    <path d="M10 7h4" />
+  </svg>',
+  'class' => 'bottom-24 right-0 sm:right-6 lg:right-2',
+  'href' => route('services.show', ['slug' => 'handphone-computer'])
+  ])
+
+  @include('sections.home.hero.tech-card', [
   'title' => 'Backend System',
   'icon' => '
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
