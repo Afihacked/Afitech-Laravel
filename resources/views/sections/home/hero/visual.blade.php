@@ -118,7 +118,7 @@
     <path d="M9 17h6" />
     <path d="M10 7h4" />
   </svg>',
-  'class' => 'bottom-32 left-1/2 -translate-x-1/2 sm:bottom-36 lg:bottom-40',
+  'class' => 'top-[44%] left-[18%] -translate-x-0 sm:top-[42%] sm:left-[20%] lg:top-[42%] lg:left-[18%]',
   'href' => route('services.show', ['slug' => 'handphone-computer'])
   ])
 
