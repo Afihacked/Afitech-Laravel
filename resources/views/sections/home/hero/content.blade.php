@@ -8,7 +8,7 @@
 
     <span aria-hidden="true">&#10024;</span>
 
-    <span>Building Future Digital Experiences</span>
+    <span>Membangun Pengalaman Digital Masa Depan</span>
 
   </div>
 
@@ -19,17 +19,17 @@
 
     <h1 class="hero-title text-5xl font-black leading-[0.95] text-slate-950 dark:text-white sm:text-6xl lg:text-8xl">
 
-      Build
+      Bangun
 
       <br>
 
-      Digital Experiences
+      Pengalaman Digital
 
       <br>
 
       <span class="bg-gradient-to-r from-blue-600 via-cyan-500 to-sky-500 bg-clip-text text-transparent">
 
-        That Matter.
+        yang Bermakna.
 
       </span>
 
@@ -54,7 +54,7 @@
       <a href="/projects"
         class="transition-default inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-slate-950 px-8 py-4 font-semibold text-white hover:scale-[1.02] dark:bg-gradient-to-r dark:from-cyan-500 dark:to-blue-600 sm:w-auto">
 
-        <span>Explore Projects</span>
+        <span>Lihat Proyek</span>
 
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
@@ -67,7 +67,7 @@
       <a href="/contact"
         class="transition-default inline-flex w-full items-center justify-center rounded-2xl border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-700 hover:border-slate-400 hover:bg-slate-50 dark:border-white/10 dark:bg-white/10 dark:text-slate-100 dark:hover:bg-white/15 sm:w-auto">
 
-        Contact Us
+        Hubungi Kami
 
       </a>
 

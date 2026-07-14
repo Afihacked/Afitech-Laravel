@@ -26,30 +26,33 @@
 
   <svg class="absolute inset-0 h-full w-full" viewBox="0 0 700 680" fill="none" aria-hidden="true">
 
-    <g opacity=".18" stroke="#38bdf8" stroke-width="1.5">
+    <g opacity=".18" stroke="#38bdf8" stroke-width="1.5" fill="none">
 
-      <line class="hero-network-line" x1="350" y1="340" x2="180" y2="80" />
+      <path class="hero-network-line" d="M350 340 C305 255, 230 185, 150 150" />
 
-      <line class="hero-network-line" x1="350" y1="340" x2="560" y2="150" />
+      <path class="hero-network-line" d="M350 340 C430 250, 505 185, 560 150" />
 
-      <line class="hero-network-line" x1="350" y1="340" x2="120" y2="500" />
+      <path class="hero-network-line" d="M350 340 C350 240, 350 135, 350 60" />
 
-      <line class="hero-network-line" x1="350" y1="340" x2="560" y2="560" />
+      <path class="hero-network-line" d="M350 340 C235 315, 125 318, 42 335" />
 
-      <line class="hero-network-line" x1="350" y1="340" x2="70" y2="340" />
+      <path class="hero-network-line" d="M350 340 C480 315, 585 325, 658 345" />
 
-      <line class="hero-network-line" x1="350" y1="340" x2="640" y2="340" />
+      <path class="hero-network-line" d="M350 340 C315 465, 240 535, 140 560" />
+
+      <path class="hero-network-line" d="M350 340 C430 470, 500 545, 560 575" />
 
     </g>
 
     <g class="hero-network-nodes" fill="#38bdf8" opacity=".28">
 
-      <circle cx="180" cy="80" r="5" />
+      <circle cx="150" cy="150" r="5" />
       <circle cx="560" cy="150" r="5" />
-      <circle cx="120" cy="500" r="5" />
-      <circle cx="560" cy="560" r="5" />
-      <circle cx="70" cy="340" r="5" />
-      <circle cx="640" cy="340" r="5" />
+      <circle cx="350" cy="60" r="5" />
+      <circle cx="42" cy="335" r="5" />
+      <circle cx="658" cy="345" r="5" />
+      <circle cx="140" cy="560" r="5" />
+      <circle cx="560" cy="575" r="5" />
 
     </g>
 
@@ -78,67 +81,46 @@
     =========================================================== --}}
 
   @include('sections.home.hero.tech-card', [
-  'title' => 'Artificial Intelligence',
+  'title' => 'Kecerdasan Buatan',
   'icon' => '
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
     <rect x="5" y="5" width="12" height="12" rx="2" />
     <path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4" />
   </svg>',
-  'class' => 'top-0 left-2 sm:left-16 lg:left-24',
+  'class' => 'top-[22%] left-[21.5%] -translate-x-1/2 sm:top-[22%] sm:left-[21.5%] lg:top-[22%] lg:left-[21.5%]',
   'href' => route('services.show', ['slug' => 'artificial-intelligence'])
   ])
 
   @include('sections.home.hero.tech-card', [
-  'title' => 'Web Development',
+  'title' => 'Pengembangan Web',
   'icon' => '
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
     <circle cx="11" cy="11" r="9" />
     <path d="M2 11h18M11 2a15 15 0 010 18M11 2a15 15 0 000 18" />
   </svg>',
-  'class' => 'top-16 right-2 sm:right-8 lg:top-24 lg:right-0',
+  'class' => 'top-[22%] left-[80%] -translate-x-1/2 sm:top-[22%] sm:left-[80%] lg:top-[22%] lg:left-[80%]',
   'href' => route('services.show', ['slug' => 'web-development'])
   ])
 
   @include('sections.home.hero.tech-card', [
-  'title' => 'Android Apps',
-  'icon' => '
-  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-    <rect x="6" y="3" width="10" height="18" rx="2" />
-    <circle cx="11" cy="17" r="1" />
-  </svg>',
-  'class' => 'bottom-24 left-0 sm:left-8 lg:left-4',
-  'href' => route('services.show', ['slug' => 'android-apps'])
-  ])
-
-  @include('sections.home.hero.tech-card', [
-  'title' => 'Handphone & Computer',
+  'title' => 'Handphone & Komputer',
   'icon' => '
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
     <rect x="4" y="3" width="16" height="18" rx="2" />
     <path d="M9 17h6" />
     <path d="M10 7h4" />
   </svg>',
-  'class' => 'top-[44%] left-[18%] -translate-x-0 sm:top-[42%] sm:left-[20%] lg:top-[42%] lg:left-[18%]',
+  'class' => 'top-[9%] left-1/2 -translate-x-1/2 sm:top-[9%] lg:top-[9%]',
   'href' => route('services.show', ['slug' => 'handphone-computer'])
   ])
 
   @include('sections.home.hero.tech-card', [
-  'title' => 'Backend System',
-  'icon' => '
-  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-    <path d="M11 3l8 4v10l-8 4-8-4V7z" />
-  </svg>',
-  'class' => 'bottom-0 right-2 sm:right-12 lg:bottom-4',
-  'href' => route('services.show', ['slug' => 'backend-system'])
-  ])
-
-  @include('sections.home.hero.tech-card', [
-  'title' => 'Cloud Services',
+  'title' => 'Layanan Cloud',
   'icon' => '
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
     <path d="M18 16a4 4 0 000-8 6 6 0 00-11-2A4 4 0 006 16z" />
   </svg>',
-  'class' => 'hidden top-1/2 left-0 sm:block lg:-left-8',
+  'class' => 'top-[49%] left-[6%] -translate-x-1/2 sm:top-[49%] sm:left-[6%] lg:top-[49%] lg:left-[6%]',
   'href' => route('services.show', ['slug' => 'cloud-services'])
   ])
 
@@ -149,8 +131,29 @@
     <path d="M8 12h8M12 8v8" />
     <circle cx="12" cy="12" r="9" />
   </svg>',
-  'class' => 'hidden top-1/2 right-0 sm:block lg:-right-8',
+  'class' => 'top-[51%] left-[94%] -translate-x-1/2 sm:top-[51%] sm:left-[94%] lg:top-[51%] lg:left-[94%]',
   'href' => route('services.show', ['slug' => 'rest-api'])
+  ])
+
+  @include('sections.home.hero.tech-card', [
+  'title' => 'Aplikasi Android',
+  'icon' => '
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="6" y="3" width="10" height="18" rx="2" />
+    <circle cx="11" cy="17" r="1" />
+  </svg>',
+  'class' => 'top-[82%] left-[20%] -translate-x-1/2 sm:top-[82%] sm:left-[20%] lg:top-[82%] lg:left-[20%]',
+  'href' => route('services.show', ['slug' => 'android-apps'])
+  ])
+
+  @include('sections.home.hero.tech-card', [
+  'title' => 'Sistem Backend',
+  'icon' => '
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M11 3l8 4v10l-8 4-8-4V7z" />
+  </svg>',
+  'class' => 'top-[84%] left-[80%] -translate-x-1/2 sm:top-[84%] sm:left-[80%] lg:top-[84%] lg:left-[80%]',
+  'href' => route('services.show', ['slug' => 'backend-system'])
   ])
 
 </div>

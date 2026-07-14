@@ -35,7 +35,7 @@
         </div>
 
         <div class="text-[11px] text-slate-500 dark:text-slate-400 sm:text-xs">
-          Powered by Afitech
+          Didukung oleh Afitech
         </div>
       </div>
 

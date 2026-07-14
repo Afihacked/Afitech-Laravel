@@ -11,6 +11,6 @@ class ServicePageTest extends TestCase
         $response = $this->get('/services/handphone-computer');
 
         $response->assertStatus(200);
-        $response->assertSee('Handphone & Computer');
+        $response->assertSee('Handphone &amp; Komputer', false);
     }
 }

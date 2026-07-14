@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contact | Afitech')
+@section('title', 'Kontak | Afitech')
 
 @section('content')
 
@@ -9,7 +9,7 @@
     <div class="grid gap-12 lg:grid-cols-[1.05fr_.95fr] lg:items-start">
       <div class="max-w-2xl">
         <span class="inline-flex rounded-full bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-400">
-          Let’s talk
+          Mari Berdiskusi
         </span>
 
         <h1 class="mt-6 text-4xl font-black tracking-tight text-slate-950 dark:text-white sm:text-5xl lg:text-6xl">
@@ -27,7 +27,7 @@
             <p class="mt-3 text-slate-600 dark:text-slate-300">afitech.services@gmail.com</p>
           </div>
           <div class="glass rounded-3xl border border-white/10 p-7 dark:bg-slate-950/80">
-            <h2 class="text-xl font-semibold text-slate-950 dark:text-white">Message</h2>
+            <h2 class="text-xl font-semibold text-slate-950 dark:text-white">Pesan</h2>
             <p class="mt-3 text-slate-600 dark:text-slate-300">Silakan jelaskan tujuan Anda supaya kami bisa menyiapkan
               solusi paling tepat.</p>
           </div>
@@ -69,7 +69,7 @@
           </div>
           <div>
             <label class="block text-sm font-medium text-slate-700 dark:text-slate-200">Email</label>
-            <input name="email" type="email" value="{{ old('email') }}" placeholder="you@example.com"
+            <input name="email" type="email" value="{{ old('email') }}" placeholder="nama@email.com"
               class="mt-3 w-full rounded-3xl border border-slate-200 bg-white/80 px-5 py-4 text-slate-900 outline-none transition-default focus:border-cyan-400 dark:border-white/10 dark:bg-slate-950/80 dark:text-white" />
           </div>
           <div>
@@ -79,7 +79,7 @@
           </div>
           <button type="submit"
             class="inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-gradient-to-r from-blue-600 via-cyan-500 to-sky-500 px-6 py-4 text-sm font-semibold text-white shadow-lg transition-default hover:scale-[1.01]">
-            Send message
+            Kirim Pesan
           </button>
         </form>
       </div>

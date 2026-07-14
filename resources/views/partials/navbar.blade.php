@@ -1,10 +1,10 @@
 @php
   $navigation = [
-      ['label' => 'Home', 'href' => '/'],
-      ['label' => 'Projects', 'href' => '/projects'],
-      ['label' => 'Blog', 'href' => '/blog'],
-      ['label' => 'About', 'href' => '/about'],
-      ['label' => 'Contact', 'href' => '/contact'],
+      ['label' => 'Beranda', 'href' => '/'],
+      ['label' => 'Proyek', 'href' => '/projects'],
+      ['label' => 'Artikel', 'href' => '/blog'],
+      ['label' => 'Tentang', 'href' => '/about'],
+      ['label' => 'Kontak', 'href' => '/contact'],
   ];
 @endphp
 
@@ -70,7 +70,7 @@
         data-cursor-hover
         class="transition-default flex size-10 items-center justify-center rounded-xl border border-slate-200/70 bg-white/70 text-slate-700 shadow-sm hover:bg-white hover:text-slate-950 dark:border-white/10 dark:bg-white/10 dark:text-cyan-100 dark:hover:bg-white/15 dark:hover:text-white"
         aria-label="Aktifkan dark mode"
-        title="Toggle theme">
+        title="Ganti tema">
 
         <svg data-theme-icon="light" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 

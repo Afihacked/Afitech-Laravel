@@ -19,7 +19,7 @@ class ContactFormSubmitted extends Mailable
 
     public function build(): self
     {
-        return $this->subject('New Contact Request from Afitech Site')
+        return $this->subject('Permintaan Kontak Baru dari Website Afitech')
             ->view('emails.contact-submitted')
             ->with(['data' => $this->data]);
     }

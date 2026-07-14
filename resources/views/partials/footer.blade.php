@@ -1,19 +1,19 @@
 @php
 $footerLinks = [
-['label' => 'Home', 'href' => '/'],
-['label' => 'Projects', 'href' => '/projects'],
-['label' => 'Blog', 'href' => '/blog'],
-['label' => 'About', 'href' => '/about'],
-['label' => 'Contact', 'href' => '/contact'],
+['label' => 'Beranda', 'href' => '/'],
+['label' => 'Proyek', 'href' => '/projects'],
+['label' => 'Artikel', 'href' => '/blog'],
+['label' => 'Tentang', 'href' => '/about'],
+['label' => 'Kontak', 'href' => '/contact'],
 ];
 
 $services = [
-['label' => 'Artificial Intelligence', 'href' => '/services/artificial-intelligence'],
-['label' => 'Web Development', 'href' => '/services/web-development'],
-['label' => 'Android Apps', 'href' => '/services/android-apps'],
-['label' => 'Handphone & Computer', 'href' => '/services/handphone-computer'],
-['label' => 'Backend System', 'href' => '/services/backend-system'],
-['label' => 'Cloud Services', 'href' => '/services/cloud-services'],
+['label' => 'Kecerdasan Buatan', 'href' => '/services/artificial-intelligence'],
+['label' => 'Pengembangan Web', 'href' => '/services/web-development'],
+['label' => 'Aplikasi Android', 'href' => '/services/android-apps'],
+['label' => 'Handphone & Komputer', 'href' => '/services/handphone-computer'],
+['label' => 'Sistem Backend', 'href' => '/services/backend-system'],
+['label' => 'Layanan Cloud', 'href' => '/services/cloud-services'],
 ['label' => 'REST API', 'href' => '/services/rest-api'],
 ];
 @endphp
@@ -61,14 +61,14 @@ $services = [
           <a href="mailto:afitech.services@gmail.com"
             class="transition-default inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-950 hover:scale-[1.02]">
 
-            Start a Project
+            Mulai Proyek
 
           </a>
 
           <a href="/"
             class="transition-default inline-flex items-center justify-center rounded-2xl border border-white/15 px-6 py-3 text-sm font-semibold text-white hover:border-cyan-300/60 hover:bg-white/10">
 
-            Back to Top
+            Kembali ke Atas
 
           </a>
 
@@ -82,7 +82,7 @@ $services = [
 
           <h2 class="text-sm font-semibold uppercase text-cyan-200">
 
-            Capabilities
+            Layanan
 
           </h2>
 
@@ -106,7 +106,7 @@ $services = [
 
           <h2 class="text-sm font-semibold uppercase text-cyan-200">
 
-            Navigation
+            Navigasi
 
           </h2>
 
@@ -135,7 +135,7 @@ $services = [
 
       <p>
 
-        &copy; {{ date('Y') }} Afitech. Crafted for future-ready digital products.
+        &copy; {{ date('Y') }} Afitech. Dibuat untuk produk digital yang siap berkembang.
 
       </p>
 
