@@ -62,7 +62,9 @@ html {
             transparent 76%
         );
     filter: blur(22px);
-    transform: skewY(-8deg);
+    transform: translate3d(-2%, -1%, 0) skewY(-8deg) scale(1);
+    will-change: transform;
+    contain: paint;
     animation: hero-aurora-flow 18s ease-in-out infinite alternate;
 }
 
@@ -100,6 +102,8 @@ html {
         0 78%
     );
     filter: blur(18px);
+    will-change: transform;
+    contain: paint;
     animation: hero-ribbon-drift 16s ease-in-out infinite alternate;
 }
 
@@ -119,10 +123,7 @@ html {
 }
 
 .hero-grid-motion {
-    background-image:
-        linear-gradient(to right, rgb(148 163 184 / 0.24) 1px, transparent 1px),
-        linear-gradient(to bottom, rgb(148 163 184 / 0.24) 1px, transparent 1px);
-    background-size: 64px 64px;
+    overflow: hidden;
     mask-image: linear-gradient(
         to bottom,
         transparent,
@@ -130,10 +131,22 @@ html {
         black 72%,
         transparent
     );
+}
+
+.hero-grid-motion::before {
+    content: "";
+    position: absolute;
+    inset: -64px;
+    background-image:
+        linear-gradient(to right, rgb(148 163 184 / 0.24) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(148 163 184 / 0.24) 1px, transparent 1px);
+    background-size: 64px 64px;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
     animation: hero-grid-drift 22s linear infinite;
 }
 
-.dark .hero-grid-motion {
+.dark .hero-grid-motion::before {
     background-image:
         linear-gradient(to right, rgb(125 211 252 / 0.12) 1px, transparent 1px),
         linear-gradient(to bottom, rgb(125 211 252 / 0.1) 1px, transparent 1px);
@@ -160,18 +173,10 @@ html {
 
 @keyframes hero-aurora-flow {
     from {
-        background-position:
-            0% 45%,
-            22% 18%,
-            60% 52%;
         transform: translate3d(-2%, -1%, 0) skewY(-8deg) scale(1);
     }
 
     to {
-        background-position:
-            42% 35%,
-            74% 28%,
-            18% 64%;
         transform: translate3d(2%, 2%, 0) skewY(-6deg) scale(1.04);
     }
 }
@@ -188,11 +193,11 @@ html {
 
 @keyframes hero-grid-drift {
     from {
-        background-position: 0 0;
+        transform: translate3d(0, 0, 0);
     }
 
     to {
-        background-position: 64px 64px;
+        transform: translate3d(64px, 64px, 0);
     }
 }
 
