@@ -20,16 +20,22 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    const cards = gsap.utils.toArray(".hero-card");
-    const cardInners = gsap.utils.toArray(".hero-card-inner");
-    const networkLines = gsap.utils.toArray(".hero-network-line");
-    const networkNodes = gsap.utils.toArray(".hero-network-nodes circle");
-    const isCompact = window.matchMedia("(max-width: 767px)").matches;
+    const isDesktop = window.matchMedia("(min-width: 1280px)").matches;
+    const cards = isDesktop ? gsap.utils.toArray(".hero-card") : [];
+    const cardInners = isDesktop ? gsap.utils.toArray(".hero-card-inner") : [];
+    const networkLines = isDesktop ? gsap.utils.toArray(".hero-network-line") : [];
+    const networkNodes = isDesktop
+        ? gsap.utils.toArray(".hero-network-nodes circle")
+        : [];
 
     const startCardFloat = () => {
+        if (!isDesktop) {
+            return;
+        }
+
         cards.forEach((card, index) => {
             gsap.to(card, {
-                y: -(isCompact ? 6 : 10) - index * 0.8,
+                y: -10 - index * 0.8,
                 duration: 2.8 + index * 0.25,
                 repeat: -1,
                 yoyo: true,
@@ -56,7 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
             ".hero-actions",
             { y: 22, opacity: 0, duration: 0.65 },
             "-=0.35",
-        )
+        );
+
+    if (!isDesktop) {
+        return;
+    }
+
+    intro
         .from(
             ".hero-visual",
             { y: 34, opacity: 0, scale: 0.98, duration: 0.9 },

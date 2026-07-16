@@ -15,9 +15,9 @@
   {{-- ==========================================================
         Heading
     =========================================================== --}}
-  <div class="mt-8">
+  <div class="mt-7 sm:mt-8">
 
-    <h1 class="hero-title text-5xl font-black leading-[0.95] text-slate-950 dark:text-white sm:text-6xl lg:text-8xl">
+    <h1 class="hero-title text-4xl font-black leading-[0.98] text-slate-950 dark:text-white sm:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
 
       Bangun
 
@@ -38,7 +38,7 @@
     {{-- ==========================================================
             Description
         =========================================================== --}}
-    <p class="hero-description mt-8 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300 sm:mt-10 sm:text-xl sm:leading-9">
+    <p class="hero-description mt-6 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-300 sm:mt-8 sm:text-lg sm:leading-8 2xl:text-xl 2xl:leading-9">
 
       Afitech membantu bisnis dan organisasi membangun website,
       aplikasi mobile, sistem backend, serta solusi AI yang cepat,
@@ -49,7 +49,7 @@
     {{-- ==========================================================
             Action Buttons
         =========================================================== --}}
-    <div class="hero-actions mt-12 flex flex-wrap items-center gap-5">
+    <div class="hero-actions mt-8 flex flex-wrap items-center gap-4 sm:mt-10 sm:gap-5 lg:mt-12">
 
       <a href="/projects"
         class="transition-default inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-slate-950 px-8 py-4 font-semibold text-white hover:scale-[1.02] dark:bg-gradient-to-r dark:from-cyan-500 dark:to-blue-600 sm:w-auto">

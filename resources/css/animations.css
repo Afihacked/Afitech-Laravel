@@ -171,6 +171,26 @@ html {
     );
 }
 
+@media (max-width: 1279px) {
+    .hero-aurora {
+        filter: blur(14px);
+        opacity: 0.68;
+        animation-duration: 28s;
+    }
+
+    .hero-ribbon {
+        display: none;
+    }
+
+    .hero-grid-motion::before {
+        animation-duration: 34s;
+    }
+
+    .hero-scan {
+        animation-duration: 14s;
+    }
+}
+
 @keyframes hero-aurora-flow {
     from {
         transform: translate3d(-2%, -1%, 0) skewY(-8deg) scale(1);

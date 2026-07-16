@@ -1,4 +1,4 @@
-<div class="hero-visual relative mt-10 h-[430px] sm:h-[500px] md:h-[560px] lg:mt-0 lg:h-[680px]">
+<div class="hero-visual relative hidden xl:mt-0 xl:block xl:h-[680px]">
 
   {{-- ==========================================================
         Ambient Glow
@@ -131,7 +131,7 @@
     <path d="M8 12h8M12 8v8" />
     <circle cx="12" cy="12" r="9" />
   </svg>',
-  'class' => 'top-[51%] left-[94%] -translate-x-1/2 sm:top-[51%] sm:left-[94%] lg:top-[51%] lg:left-[94%]',
+  'class' => 'top-[51%] left-[86%] -translate-x-1/2 sm:top-[51%] sm:left-[86%] lg:top-[51%] lg:left-[86%]',
   'href' => route('services.show', ['slug' => 'rest-api'])
   ])
 

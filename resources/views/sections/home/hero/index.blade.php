@@ -4,7 +4,7 @@
 
   <div class="container-afitech relative z-10 min-h-[calc(100svh-120px)]">
 
-    <div class="grid items-center gap-14 lg:grid-cols-[1.05fr_.95fr] lg:gap-20">
+    <div class="grid items-center gap-14 xl:grid-cols-[1.05fr_.95fr] xl:gap-20">
 
       @include('sections.home.hero.content')
 
