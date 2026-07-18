@@ -55,6 +55,40 @@
 
       @endforeach
 
+      <li>
+
+        @guest
+
+          <a href="{{ route('auth', ['mode' => 'login']) }}"
+            class="transition-default rounded-xl bg-slate-950 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 hover:scale-[1.02] hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:shadow-cyan-500/10 dark:hover:bg-cyan-100">
+
+            Login
+
+          </a>
+
+        @else
+
+          <div class="flex items-center gap-2 rounded-2xl border border-slate-200/70 bg-white/70 p-1 pl-3 dark:border-white/10 dark:bg-white/10">
+
+            <span class="max-w-28 truncate text-sm font-semibold text-slate-700 dark:text-slate-100">
+              {{ auth()->user()->name }}
+            </span>
+
+            <form method="POST" action="{{ route('logout') }}">
+              @csrf
+              <button
+                type="submit"
+                class="transition-default rounded-xl bg-slate-950 px-3 py-2 text-xs font-bold text-white hover:bg-slate-800 dark:bg-cyan-500 dark:text-white dark:hover:bg-cyan-400">
+                Keluar
+              </button>
+            </form>
+
+          </div>
+
+        @endguest
+
+      </li>
+
     </ul>
 
     {{-- ==========================================================
@@ -152,7 +186,33 @@
 
       </div>
 
-      <div class="mt-4 border-t border-white/60 pt-4 dark:border-white/10">
+      <div class="mt-4 grid gap-2 border-t border-white/60 pt-4 dark:border-white/10">
+
+        @guest
+
+          <a href="{{ route('auth', ['mode' => 'login']) }}"
+            class="transition-default flex items-center justify-center rounded-2xl bg-slate-950 px-5 py-3 text-sm font-semibold text-white hover:scale-[1.01] dark:bg-white dark:text-slate-950">
+
+            Login
+
+          </a>
+
+        @else
+
+          <div class="rounded-2xl bg-white/70 px-4 py-3 text-sm font-semibold text-slate-700 dark:bg-white/10 dark:text-slate-100">
+            {{ auth()->user()->name }}
+          </div>
+
+          <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button
+              type="submit"
+              class="transition-default flex w-full items-center justify-center rounded-2xl bg-slate-950 px-5 py-3 text-sm font-semibold text-white hover:scale-[1.01] dark:bg-cyan-500">
+              Keluar
+            </button>
+          </form>
+
+        @endguest
 
         <a href="https://github.com/Afihacked/Afitech-Laravel"
           target="_blank"

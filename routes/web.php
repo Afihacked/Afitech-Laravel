@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PasswordResetController;
 use Illuminate\Support\Facades\Route;
 
 $services = [
@@ -84,7 +87,7 @@ $services = [
 
 Route::get('/', function () {
     return view('pages.home');
-});
+})->name('home');
 
 Route::get('/projects', function () {
     return view('pages.projects');
@@ -102,7 +105,27 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
-Route::post('/contact', [App\Http\Controllers\ContactController::class, 'submit']);
+Route::post('/contact', [ContactController::class, 'submit']);
+
+Route::middleware('guest')->group(function (): void {
+    Route::get('/auth', [AuthController::class, 'show'])->name('auth');
+    Route::get('/login', fn () => redirect()->route('auth', ['mode' => 'login']))->name('login');
+    Route::get('/register', fn () => redirect()->route('auth', ['mode' => 'register']))->name('register');
+    Route::post('/login', [AuthController::class, 'login'])->name('login.store');
+    Route::post('/register', [AuthController::class, 'register'])->name('register.store');
+
+    Route::get('/auth/google', [AuthController::class, 'redirectToGoogle'])->name('auth.google');
+    Route::get('/auth/google/callback', [AuthController::class, 'handleGoogleCallback'])->name('auth.google.callback');
+
+    Route::get('/forgot-password', [PasswordResetController::class, 'request'])->name('password.request');
+    Route::post('/forgot-password', [PasswordResetController::class, 'email'])->name('password.email');
+    Route::get('/reset-password/{token}', [PasswordResetController::class, 'reset'])->name('password.reset');
+    Route::post('/reset-password', [PasswordResetController::class, 'update'])->name('password.update');
+});
+
+Route::post('/logout', [AuthController::class, 'logout'])
+    ->middleware('auth')
+    ->name('logout');
 
 Route::get('/services/{slug}', function ($slug) use ($services) {
     if (!isset($services[$slug])) {
